@@ -81,6 +81,13 @@ DATA["USE_WATCHDOG"] = {
 # 		"help": "Automaticly sync clock after reboot",
 # }
 
+DATA["CONFIG_ALL_LETTERS"] = {
+        "name": "Include all letters (40 bytes)",
+        "depends": [],
+        "default": False,
+        "help": "Includes support for small and capitalized letters (pretier but less readable output from some modules).",
+}
+
 
 DATA["DEBUG"] = {
         "name": "Debug",

@@ -80,9 +80,72 @@ const u8 lcd_font[] =
   0                                        ,     // Displays " " (;)
   SEG_A+                        SEG_F+SEG_G,     // Displays "<" as high c
                     SEG_D+            SEG_G,     // Displays "="
-  0                                        ,     // Displays " " (>)
+  SEG_A+                        SEG_F+SEG_G,     // Displays ">"
   SEG_A+SEG_B+            SEG_E+      SEG_G,     // Displays "?"
-  0                                        ,     // Displays " " (@)
+  SEG_A+SEG_B+      SEG_D+SEG_E+SEG_F+SEG_G,     // Displays "@"
+#ifdef CONFIG_ALL_LETTERS
+  SEG_A+SEG_B+SEG_C+      SEG_E+SEG_F+SEG_G,     // Displays "A"
+  SEG_A+SEG_B+SEG_C+SEG_D+SEG_E+SEG_F+SEG_G,     // Displays "B"
+  SEG_A+            SEG_D+SEG_E+SEG_F      ,     // Displays "C"
+  SEG_A+SEG_B+SEG_C+SEG_D+SEG_E+SEG_F      ,     // Displays "D" same as O
+  SEG_A+           +SEG_D+SEG_E+SEG_F+SEG_G,     // Displays "E"
+  SEG_A+           +      SEG_E+SEG_F+SEG_G,     // Displays "F"
+  SEG_A+      SEG_C+SEG_D+SEG_E+SEG_F+SEG_G,     // Displays "G" same as 6
+        SEG_B+SEG_C+      SEG_E+SEG_F+SEG_G,     // Displays "H"
+        SEG_B+SEG_C                        ,     // Displays "I"
+        SEG_B+SEG_C+SEG_D                  ,     // Displays "J"
+        SEG_B+SEG_C+      SEG_E+SEG_F+SEG_G,     // Displays "K" same as H
+                    SEG_D+SEG_E+SEG_F      ,     // Displays "L"
+  SEG_A+SEG_B+SEG_C+      SEG_E+SEG_F      ,     // Displays "M"
+        SEG_B+SEG_C+      SEG_E+SEG_F+SEG_G,     // Displays "N" same as H
+  SEG_A+SEG_B+SEG_C+SEG_D+SEG_E+SEG_F      ,     // Displays "O"
+  SEG_A+SEG_B+            SEG_E+SEG_F+SEG_G,     // Displays "P"
+  SEG_A+SEG_B+SEG_C+SEG_D+SEG_E+SEG_F      ,     // Displays "Q" same as O
+  SEG_A+SEG_B+SEG_C+      SEG_E+SEG_F+SEG_G,     // Displays "R" same as A
+  SEG_A+      SEG_C+SEG_D+      SEG_F+SEG_G,     // Displays "S" same as 5
+  SEG_A+SEG_B+SEG_C                        ,     // Displays "T"
+        SEG_B+SEG_C+SEG_D+SEG_E+SEG_F      ,     // Displays "U"
+        SEG_B+SEG_C+SEG_D+SEG_E+SEG_F      ,     // Displays "V" same as U
+        SEG_B+SEG_C+SEG_D+SEG_E+SEG_F+SEG_G,     // Displays "W"
+        SEG_B+SEG_C+     +SEG_E+SEG_F+SEG_G,     // Displays "X" as H
+        SEG_B+SEG_C+            SEG_F+SEG_G,     // Displays "Y"
+  SEG_A+SEG_B+      SEG_D+SEG_E+      SEG_G,     // Displays "Z" same as 2
+  SEG_A+            SEG_D+SEG_E+SEG_F      ,     // Displays "[" same as C
+              SEG_C+            SEG_F+SEG_G,     // Displays "\"
+  SEG_A+SEG_B+SEG_C+SEG_D                  ,     // Displays "]"
+  SEG_A+SEG_B+                        SEG_G,     // Displays "^"
+                    SEG_D                  ,     // Displays "_"
+                                SEG_F      ,     // Displays "`"
+              SEG_C+SEG_D+SEG_E+      SEG_G,     // Displays "a" same as o
+              SEG_C+SEG_D+SEG_E+SEG_F+SEG_G,     // Displays "b"
+                    SEG_D+SEG_E+      SEG_G,     // Displays "c"
+        SEG_B+SEG_C+SEG_D+SEG_E+      SEG_G,     // Displays "d"
+                    SEG_D+SEG_E+      SEG_G,     // Displays "e" same as c
+                    SEG_D+SEG_E+      SEG_G,     // Displays "f" same as c
+  SEG_A+SEG_B+SEG_C+SEG_D+      SEG_F+SEG_G,     // Displays "g" same as 9
+              SEG_C+      SEG_E+SEG_F+SEG_G,     // Displays "h"
+                          SEG_E            ,     // Displays "i"
+              SEG_C+SEG_D                  ,     // Displays "j"
+                    SEG_D+SEG_E+SEG_F+SEG_G,     // Displays "k"
+                          SEG_E+SEG_F      ,     // Displays "l"
+              SEG_C+      SEG_E+      SEG_G,     // Displays "m" same as n
+              SEG_C+      SEG_E+      SEG_G,     // Displays "n"
+              SEG_C+SEG_D+SEG_E+      SEG_G,     // Displays "o"
+              SEG_C+SEG_D+SEG_E+      SEG_G,     // Displays "p" same as o
+              SEG_C+SEG_D+SEG_E+      SEG_G,     // Displays "q" same as o
+                          SEG_E+      SEG_G,     // Displays "r"
+                    SEG_D+SEG_E+      SEG_G,     // Displays "s" same as c
+                    SEG_D+SEG_E+SEG_F+SEG_G,     // Displays "t"
+              SEG_C+SEG_D+SEG_E            ,     // Displays "u"
+              SEG_C+SEG_D+SEG_E            ,     // Displays "v" same as u
+              SEG_C+SEG_D+SEG_E            ,     // Displays "w" same as u
+              SEG_C+     +SEG_E            ,     // Displays "x" literally ||
+              SEG_C+SEG_D+SEG_E            ,     // Displays "y" same as u
+              SEG_C+SEG_D+            SEG_G,     // Displays "z" same as t
+        SEG_B+SEG_C+                  SEG_G,     // Displays "{"
+                          SEG_E+SEG_F      ,     // Displays "|"
+                          SEG_E+SEG_F+SEG_G,     // Displays "}"
+#else
   SEG_A+SEG_B+SEG_C+      SEG_E+SEG_F+SEG_G,     // Displays "A"
               SEG_C+SEG_D+SEG_E+SEG_F+SEG_G,     // Displays "b"
                     SEG_D+SEG_E+      SEG_G,     // Displays "c"
@@ -93,7 +156,7 @@ const u8 lcd_font[] =
               SEG_C+      SEG_E+SEG_F+SEG_G,     // Displays "h"
                           SEG_E            ,     // Displays "i"
   SEG_A+SEG_B+SEG_C+SEG_D                  ,     // Displays "J"
-  		     		SEG_D+      SEG_F+SEG_G,     // Displays "k"
+                    SEG_D+      SEG_F+SEG_G,     // Displays "k"
                     SEG_D+SEG_E+SEG_F      ,     // Displays "L"
   SEG_A+SEG_B+SEG_C+      SEG_E+SEG_F      ,     // Displays "M"
               SEG_C+      SEG_E+      SEG_G,     // Displays "n"
@@ -109,6 +172,7 @@ const u8 lcd_font[] =
         SEG_B+SEG_C+     +SEG_E+SEG_F+SEG_G,     // Displays "X" as H
         SEG_B+SEG_C+SEG_D+      SEG_F+SEG_G,     // Displays "Y"
   SEG_A+SEG_B+      SEG_D+SEG_E+      SEG_G,     // Displays "Z" same as 2
+#endif
 };
 
 
