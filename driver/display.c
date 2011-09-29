@@ -431,7 +431,11 @@ void display_char(u8 segment, u8 chr, u8 mode)
 
 		// Get bitmask for character from table
 		bitmask = segments_bitmask[segment];
-		
+
+		// Support lowercase input
+		if ((chr >= 0x61) && (chr <= 0x7A))
+			chr-=0x20;
+
 		// Get bits from font set
 		if ((chr >= 0x30) && (chr <= 0x5A)) 
 		{
